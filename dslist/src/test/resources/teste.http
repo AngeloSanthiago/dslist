@@ -4,3 +4,7 @@ GET http://localhost:8080 HTTP/1.1
 ###
 GET http://localhost:8080/games HTTP/1.1
 content-type: application/json
+
+###
+GET http://localhost:8080/games/2 HTTP/1.1
+content-type: application/json
