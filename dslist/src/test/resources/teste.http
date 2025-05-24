@@ -1,4 +1,7 @@
-# Teste 1
+@host-desenv = http://localhost:8080
+@host = {{host-desenv}}
+
+### Teste 1
 GET http://localhost:8080 HTTP/1.1
 
 ###
@@ -16,3 +19,12 @@ content-type: application/json
 ### Games by list
 GET http://localhost:8080/lists/2/games HTTP/1.1
 content-type: application/json
+
+### List Replacement
+POST {{host}}/lists/2/replacement HTTP/1.1
+content-type: application/json
+
+{
+    "sourceIndex":  3,
+    "destinationIndex": 1
+}
